@@ -19,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/codeadoodle/jekyll-bootleaf/issues"
   },
-  "homepage": "https://github.com/codeadoodle/jekyll-bootleaf#readme"
+  "homepage": "https://github.com/codeadoodle/jekyll-bootleaf#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-build-control": "^0.6.2",
+    "grunt-contrib-connect": "^0.11.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jekyll": "^0.4.3",
+    "load-grunt-tasks": "^3.4.0"
+  }
 }
