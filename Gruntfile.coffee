@@ -89,6 +89,10 @@ module.exports = (grunt) ->
   grunt.registerTask "default", [
     "serve"
   ]
+  # Recompile production version 
+  grunt.registerTask "prod", [
+    "jekyll:production"
+  ]
   # Recompile production version and deploy to GitHub Pages
   grunt.registerTask "deploy", [
     "jekyll:production"
