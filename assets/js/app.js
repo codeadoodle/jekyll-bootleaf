@@ -485,8 +485,8 @@ var baseLayers = {
 
 var groupedOverlays = {
   "Points of Interest": {
-    "<img src='/assets/img/theater.png' width='24' height='28'>&nbsp;Theaters": theaterLayer,
-    "<img src='/assets/img/museum.png' width='24' height='28'>&nbsp;Museums": museumLayer
+    "<img src='{{ site.baseurl }}/assets/img/theater.png' width='24' height='28'>&nbsp;Theaters": theaterLayer,
+    "<img src='{{ site.baseurl }}/assets/img/museum.png' width='24' height='28'>&nbsp;Museums": museumLayer
   },
   "Reference": {
     "Boroughs": boroughs,
@@ -605,7 +605,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: theatersBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='/assets/img/theater.png' width='24' height='28'>&nbsp;Theaters</h4>",
+      header: "<h4 class='typeahead-header'><img src='{{ site.baseurl }}/assets/img/theater.png' width='24' height='28'>&nbsp;Theaters</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -613,7 +613,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: museumsBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='/assets/img/museum.png' width='24' height='28'>&nbsp;Museums</h4>",
+      header: "<h4 class='typeahead-header'><img src='{{ site.baseurl }}/assets/img/museum.png' width='24' height='28'>&nbsp;Museums</h4>",
       suggestion: Handlebars.compile(["{{name}}<br>&nbsp;<small>{{address}}</small>"].join(""))
     }
   }, {
@@ -621,7 +621,7 @@ $(document).one("ajaxStop", function () {
     displayKey: "name",
     source: geonamesBH.ttAdapter(),
     templates: {
-      header: "<h4 class='typeahead-header'><img src='/assets/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
+      header: "<h4 class='typeahead-header'><img src='{{ site.baseurl }}/assets/img/globe.png' width='25' height='25'>&nbsp;GeoNames</h4>"
     }
   }).on("typeahead:selected", function (obj, datum) {
     if (datum.source === "Boroughs") {
